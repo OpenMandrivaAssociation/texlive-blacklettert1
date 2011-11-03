@@ -1,3 +1,9 @@
+# revision 15878
+# category Package
+# catalog-ctan /fonts/gothic/blacklettert1
+# catalog-date 2008-04-19 22:58:44 +0200
+# catalog-license other-free
+# catalog-version undef
 Name:		texlive-blacklettert1
 Version:	20080419
 Release:	1
@@ -71,6 +77,7 @@ font selection scheme.
 %doc %{_texmfdistdir}/source/fonts/blacklettert1/yfrak.pl
 %doc %{_texmfdistdir}/source/fonts/blacklettert1/ygoth.pl
 %doc %{_texmfdistdir}/source/fonts/blacklettert1/yswab.pl
+%doc %{_tlpkgobjdir}/*.tlpobj
 
 #-----------------------------------------------------------------------
 %prep
@@ -81,3 +88,5 @@ font selection scheme.
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar fonts tex doc source %{buildroot}%{_texmfdistdir}
+mkdir -p %{buildroot}%{_tlpkgobjdir}
+cp -fpa tlpkg/tlpobj/*.tlpobj %{buildroot}%{_tlpkgobjdir}

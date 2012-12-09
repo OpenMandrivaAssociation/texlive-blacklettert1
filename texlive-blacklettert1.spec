@@ -77,3 +77,18 @@ font selection scheme.
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar fonts tex doc source %{buildroot}%{_texmfdistdir}
+
+
+%changelog
+* Tue Jan 03 2012 Paulo Andrade <pcpa@mandriva.com.br> 20080419-2
++ Revision: 749766
+- Rebuild to reduce used resources
+
+* Sat Nov 05 2011 Paulo Andrade <pcpa@mandriva.com.br> 20080419-1
++ Revision: 717951
+- texlive-blacklettert1
+- texlive-blacklettert1
+- texlive-blacklettert1
+- texlive-blacklettert1
+- texlive-blacklettert1
+

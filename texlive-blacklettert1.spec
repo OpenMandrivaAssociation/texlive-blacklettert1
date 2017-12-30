@@ -5,8 +5,8 @@
 # catalog-license other-free
 # catalog-version undef
 Name:		texlive-blacklettert1
-Version:	20080419
-Release:	10
+Version:	20170414
+Release:	1
 Summary:	T1-encoded versions of Haralambous old German fonts
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/fonts/gothic/blacklettert1

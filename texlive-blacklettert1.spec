@@ -1,19 +1,13 @@
-# revision 15878
-# category Package
-# catalog-ctan /fonts/gothic/blacklettert1
-# catalog-date 2008-04-19 22:58:44 +0200
-# catalog-license other-free
-# catalog-version undef
 Name:		texlive-blacklettert1
-Version:	20190228
+Version:	15878
 Release:	1
 Summary:	T1-encoded versions of Haralambous old German fonts
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/fonts/gothic/blacklettert1
 License:	OTHER-FREE
-Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/blacklettert1.tar.xz
-Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/blacklettert1.doc.tar.xz
-Source2:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/blacklettert1.source.tar.xz
+Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/blacklettert1.r15878.tar.xz
+Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/blacklettert1.doc.r15878.tar.xz
+Source2:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/blacklettert1.source.r15878.tar.xz
 BuildArch:	noarch
 BuildRequires:	texlive-tlpkg
 Requires(pre):	texlive-tlpkg
@@ -27,12 +21,12 @@ package includes LaTeX macros to embed the fonts into the LaTeX
 font selection scheme.
 
 %post
-    %{_sbindir}/texlive.post
+%{_sbindir}/texlive.post
 
 %postun
-    if [ $1 -eq 0 ]; then
+if [ $1 -eq 0 ]; then
 	%{_sbindir}/texlive.post
-    fi
+fi
 
 #-----------------------------------------------------------------------
 %files
@@ -70,25 +64,11 @@ font selection scheme.
 
 #-----------------------------------------------------------------------
 %prep
-%setup -c -a0 -a1 -a2
+%setup -c -a1 -a2
+%autopatch -p1
 
 %build
 
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar fonts tex doc source %{buildroot}%{_texmfdistdir}
-
-
-%changelog
-* Tue Jan 03 2012 Paulo Andrade <pcpa@mandriva.com.br> 20080419-2
-+ Revision: 749766
-- Rebuild to reduce used resources
-
-* Sat Nov 05 2011 Paulo Andrade <pcpa@mandriva.com.br> 20080419-1
-+ Revision: 717951
-- texlive-blacklettert1
-- texlive-blacklettert1
-- texlive-blacklettert1
-- texlive-blacklettert1
-- texlive-blacklettert1
-
